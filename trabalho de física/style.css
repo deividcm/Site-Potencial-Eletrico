@@ -1,0 +1,337 @@
+
+
+/* CONFIGURAÇÃO GERAL */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Garamond, Helvetica, sans-serif;
+    background: #f5effa;
+    color: #321044;
+    line-height: 1.7;
+}
+
+
+header {
+    min-height: 190px;
+    padding: 35px 6%;
+    background:
+        linear-gradient(90deg, #190526 15%, #35104f 60%, #4d1768aa 100%),
+        url("https://www.scienzainrete.it/files/styles/molto_grande/public/1024px-Plasma_lamp_bulb.svg_.png?itok=w4hvUn_t")
+        no-repeat right center / auto 180px,
+        #250b36;
+    color: white;
+    border-bottom: 4px solid #a855f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.3;
+    text-shadow: 0 0 15px #c084fc66;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #e9d5ff;
+    font-size: 16px;
+}
+
+
+nav {
+    text-align: center;
+    padding: 17px 6%;
+    background: #2b0c3e;
+    border-bottom: 1px solid #7135a0;
+}
+
+nav a {
+    display: inline-block;
+    margin: 0 16px;
+    color: #f3e8ff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d8a5ff;
+    transform: translateY(-2px);
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e5d4f3;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px #4b176a15;
+}
+
+main h2 {
+    color: #681b91;
+    font-size: 27px;
+    line-height: 1.35;
+    margin-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #e9d5ff;
+}
+
+main p {
+    color: #574365;
+    font-size: 16px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.card {
+    width: auto;
+    min-width: 0;
+    padding: 25px 20px;
+    background: linear-gradient(145deg, #faf5ff, #eee1fa);
+    border: 1px solid #dfc4f4;
+    border-radius: 17px;
+    box-shadow: 0 5px 16px #47136a12;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    border-color: #a855f7;
+    box-shadow: 0 12px 28px #8b36c52b;
+}
+
+.card h3 {
+    color: #64158a;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.card p {
+    color: #604d70;
+    font-size: 14px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 17px;
+    background: linear-gradient(135deg, #8129b5, #a855f7);
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: linear-gradient(135deg, #5e168b, #8129b5);
+    box-shadow: 0 4px 14px #8129b544;
+}
+
+
+a {
+    transition: color 0.3s, background 0.3s;
+}
+
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    background: #200a30;
+    color: #ead5ff;
+    border-top: 4px solid #a855f7;
+}
+
+footer p {
+    margin: 4px 0;
+    color: #ead5ff;
+    font-size: 14px;
+}
+
+
+
+p {
+    color: #574365;
+    font-size: 14px;
+}
+
+
+nav {
+    position: relative;
+    text-align: center;
+    padding: 18px;
+}
+
+nav a {
+    margin: 0 18px;
+}
+
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 35px 10px 50px;
+    border-bottom: 1px solid #eadcf5;
+}
+
+.texto-apresentacao {
+    flex: 1;
+}
+
+.destaque {
+    display: inline-block;
+    color: #9333c9;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.texto-apresentacao h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    color: #45105e;
+    border: none;
+}
+
+.texto-apresentacao p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.imagem-destaque {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f5e9ff, #e7cafa);
+    border-radius: 25px;
+    padding: 20px;
+    min-height: 260px;
+}
+
+.imagem-destaque img {
+    width: 100%;
+    max-width: 300px;
+    height: 230px;
+    object-fit: contain;
+}
+
+
+.botao-principal {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #7023a0, #a855f7);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: #541477;
+    transform: translateY(-3px);
+}
+
+
+.topicos {
+    padding-top: 35px;
+}
+
+.titulo-topicos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulo-topicos h2 {
+    border: none;
+    margin: 5px 0;
+    font-size: 29px;
+}
+
+.titulo-topicos p {
+    color: #725d80;
+}
+
+
+.card {
+    position: relative;
+    border-top: 4px solid #9333c9;
+    padding: 25px 20px;
+}
+
+.numero {
+    color: #c084fc;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    font-size: 20px;
+}
+
+.card a {
+    background: transparent;
+    color: #7926a5;
+    padding: 9px 0;
+}
+
+.card a:hover {
+    background: transparent;
+    color: #b14ee8;
+    box-shadow: none;
+}
+
+
+footer h3 {
+    color: #e9d5ff;
+    margin: 0 0 8px;
+}
+
+
+@media (max-width: 700px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0 35px;
+    }
+
+    .texto-apresentacao h2 {
+        font-size: 27px;
+    }
+
+    .imagem-destaque {
+        width: 100%;
+        min-height: 200px;
+    }
+
+    .imagem-destaque img {
+        height: 180px;
+    }
+
+    .titulo-topicos h2 {
+        font-size: 24px;
+    }
+}

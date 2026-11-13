@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Capacitância</title>
+</head>
+
+<body>
+
+<header>
+<h1>Calculadora</h1>
+<p>Utilize nossas calculadoras para resolver problemas com potencia</p>
+</header>
+
+<nav>
+<a href="principal.html">⬅ Voltar para a página principal</a>
+</nav>
+
+<main>
+<h2>Como funciona a calculadora?</h2>
+
+<p>
+As calculadoras são ferramentas que permitem realizar cálculos matemáticos de forma rápida e precisa.Nesse caso as calculadoras pedem a voltagem e a corrente elétrica para calcular a potência elétrica. A potência elétrica é a quantidade de energia elétrica consumida por um dispositivo em um determinado período de tempo. A fórmula para calcular a potência elétrica é P = V * I, onde P é a potência em watts (W), V é a voltagem em volts (V) e I é a corrente em amperes (A).
+</p>
+
+<h2>Calculadora real</h2>
+
+<div class="calculadora-potencia">
+    <label for="voltagem">Voltagem (V):</label>
+    <input type="number" id="voltagem" step="any" placeholder="Ex: 12">
+
+    <label for="corrente">Corrente (A):</label>
+    <input type="number" id="corrente" step="any" placeholder="Ex: 2">
+
+    <button type="button" id="calcularPotencia">Calcular potência</button>
+
+    <p id="resultadoPotencia">Resultado: --</p>
+</div>
+
+<h2>Fórmula que a calculadora utiliza</h2>
+
+<p>
+P = V * I
+</p>
+
+<p>
+P = potência, medida em watts (W).<br>
+V = voltagem, medida em volts (V).<br>
+I = corrente, medida em amperes (A).
+</p>
+
+
+
+</main>
+
+<footer>
+<p>Trabalho de Física - 1º ano</p>
+</footer>
+
+<script>
+function calcularPotencia(voltagem, corrente) {
+    if (typeof voltagem !== 'number' || typeof corrente !== 'number') {
+        throw new Error("Os valores devem ser números.");
+    }
+
+    if (voltagem < 0 || corrente < 0) {
+        throw new Error("Voltagem e corrente não podem ser negativas.");
+    }
+
+    return voltagem * corrente;
+}
+
+document.getElementById('calcularPotencia').addEventListener('click', function () {
+    try {
+        const voltagem = parseFloat(document.getElementById('voltagem').value);
+        const corrente = parseFloat(document.getElementById('corrente').value);
+
+        if (isNaN(voltagem) || isNaN(corrente)) {
+            alert("Entrada inválida. Digite números válidos.");
+            return;
+        }
+
+        const potencia = calcularPotencia(voltagem, corrente);
+        document.getElementById('resultadoPotencia').textContent = `A potência elétrica é: ${potencia.toFixed(2)} W`;
+    } catch (error) {
+        alert("Erro: " + error.message);
+    }
+});
+</script>
+
+</body>
+</html>

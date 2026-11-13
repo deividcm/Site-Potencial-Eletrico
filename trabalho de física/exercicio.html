@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Capacitância</title>
+</head>
+
+<body>
+
+<header>
+<h1>Exercicios</h1>
+<p>Teste seus conhecimentos com exercicios ja corrigidos</p>
+</header>
+
+<nav>
+<a href="principal.html">⬅ Voltar para a página principal</a>
+</nav>
+
+<main>
+<h2>Você aprendeu sobre Potencial elétrico?</h2>
+
+<p>
+1. Uma carga elétrica possui energia potencial elétrica de 20 J e carga de 4 C. Calcule o potencial elétrico.<br>
+
+2. Uma carga de 5 C possui energia potencial elétrica de 100 J. Qual é o potencial elétrico?<br>
+
+3. Um corpo apresenta energia potencial elétrica de 60 J e carga de 3 C. Determine seu potencial elétrico.<br><br>
+
+RESPOSTAS:<br>
+
+1. 
+V
+=
+20
+/
+4
+=
+V=20/4= 5 V<br>
+
+2. 
+V
+=
+100
+/
+5
+=
+V=100/5= 20 V<br>
+
+3. 
+V
+=
+60
+/
+3
+=
+V=60/3= 20 V<br>
+</p>
+
+<h2>Você aprendeu sobre Campo eletrico?</h2>
+
+<p>
+1. Uma carga elétrica de 2 C sofre uma força elétrica de 10 N. Calcule o campo elétrico.<br>
+
+2. Uma carga de 5 C sofre uma força de 50 N. Qual é o valor do campo elétrico?<br>
+
+3. Uma carga elétrica de 4 C está submetida a uma força de 20 N. Determine o campo elétrico.<br><br>
+RESPOSTAS:<br>
+
+1. 
+E
+=
+10
+/
+2
+=
+E=10/2= 5 N/C<BR>
+
+2. 
+E
+=
+50
+/
+5
+=
+E=50/5= 10 N/C<BR>
+
+3. 
+E
+=
+20
+/
+4
+=
+E=20/4= 5 N/C<BR>
+</p>
+
+<h2>Você aprendeu sobre Capacitânia?</h2>
+
+<p>
+1. Um capacitor armazena uma carga elétrica de 20 C quando submetido a uma tensão de 10 V. Calcule sua capacitância.<br>
+
+2. Um capacitor possui carga de 50 C e tensão de 25 V. Qual é sua capacitância?<br>
+
+3. Um capacitor armazena 100 C de carga sob uma tensão de 20 V. Determine sua capacitância.<br><br>
+
+RESPOSTAS:<br>
+
+1. 
+C
+=
+20
+/
+10
+=
+C=20/10= 2 F<br>
+
+2. 
+C
+=
+50
+/
+25
+=
+C=50/25= 2 F<br>
+
+3. 
+C
+=
+100
+/
+20
+=
+C=100/20= 5 F<Br>
+</p>
+
+<h2>Você aprendeu sobre Tensâo eletrica?</h2>
+
+<p>
+1. Uma carga elétrica possui energia potencial de 40 J e carga de 5 C. Calcule a tensão elétrica.<br>
+
+2. Uma carga de 4 C possui energia potencial elétrica de 80 J. Qual é a tensão elétrica?<br>
+
+3. Um corpo apresenta energia potencial elétrica de 150 J e carga de 10 C. Determine a tensão elétrica.<br><br>
+
+RESPOSTAS:<br>
+
+1. 
+U
+=
+40
+/
+5
+=
+U=40/5= 8 V<br>
+
+2. 
+U
+=
+80
+/
+4
+=
+U=80/4= 20 V<br>
+
+3. 
+U
+=
+150
+/
+10
+=
+U=150/10= 15 V<br>
+</p>
+
+
+</main>
+
+<footer>
+<p>Trabalho de Física - 1º ano</p>
+</footer>
+
+<script>
+function calcularPotencia(voltagem, corrente) {
+    if (typeof voltagem !== 'number' || typeof corrente !== 'number') {
+        throw new Error("Os valores devem ser números.");
+    }
+
+    if (voltagem < 0 || corrente < 0) {
+        throw new Error("Voltagem e corrente não podem ser negativas.");
+    }
+
+    return voltagem * corrente;
+}
+
+document.getElementById('calcularPotencia').addEventListener('click', function () {
+    try {
+        const voltagem = parseFloat(document.getElementById('voltagem').value);
+        const corrente = parseFloat(document.getElementById('corrente').value);
+
+        if (isNaN(voltagem) || isNaN(corrente)) {
+            alert("Entrada inválida. Digite números válidos.");
+            return;
+        }
+
+        const potencia = calcularPotencia(voltagem, corrente);
+        document.getElementById('resultadoPotencia').textContent = `A potência elétrica é: ${potencia.toFixed(2)} W`;
+    } catch (error) {
+        alert("Erro: " + error.message);
+    }
+});
+</script>
+
+</body>
+</html>
