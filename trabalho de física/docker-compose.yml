@@ -1,0 +1,7 @@
+services:
+  website:
+    build: .
+    container_name: potencial-eletrico
+    ports:
+      - "9006:80"
+    restart: unless-stopped
